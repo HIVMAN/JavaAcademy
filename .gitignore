@@ -1,15 +1,4 @@
 /target/
-/target/*
-/.settings/
-/.settings/*
-/.idea/
-/.classpath
-/.project
-/cpr.bat
 /.idea
-/*.iml
-/*.log
-/soap-ui-logs/
-/atlassian-ide-plugin.xml
-/bin
-/bin/*
+*.iml
+*.xlsx
