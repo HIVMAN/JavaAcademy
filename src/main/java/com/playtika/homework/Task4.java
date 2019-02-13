@@ -9,22 +9,25 @@ public class Task4 {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         System.out.println("Please type distance: ");
-        int distance = console.nextInt();
+        double distance = console.nextDouble();
         System.out.println("Please type time: ");
-        int time = console.nextInt();
+        double time = console.nextDouble();
         System.out.println("Your speed is: " + calculateSpeed(time, distance) + " m/s");
 
     }
 
-    public static float calculateSpeed(int timeInMinutes, int distanceInKillometers) {
-        return convertKilometersToMetres(distanceInKillometers) / convertMinutesToSeconds(timeInMinutes);
+    public static double calculateSpeed(double timeInMinutes, double distanceInKilometers) {
+        if (timeInMinutes == 0) {
+            throw new IllegalArgumentException("time should be not zero");
+        }
+        return convertKilometersToMetres(distanceInKilometers) / convertMinutesToSeconds(timeInMinutes);
     }
 
-    private static int convertMinutesToSeconds(int minutes) {
+    private static double convertMinutesToSeconds(double minutes) {
         return minutes * 60;
     }
 
-    private static int convertKilometersToMetres(int kilometers) {
+    private static double convertKilometersToMetres(double kilometers) {
         return kilometers * 1000;
     }
 }
