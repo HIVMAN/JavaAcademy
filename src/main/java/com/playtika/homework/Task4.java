@@ -8,9 +8,9 @@ public class Task4 {
 
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
-        System.out.println("Please type distance: ");
+        System.out.println("Please type distance in kilometers: ");
         double distance = console.nextDouble();
-        System.out.println("Please type time: ");
+        System.out.println("Please type time in minutes: ");
         double time = console.nextDouble();
         System.out.println("Your speed is: " + calculateSpeed(time, distance) + " m/s");
 
