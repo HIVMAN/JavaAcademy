@@ -17,8 +17,8 @@ public class Task4 {
     }
 
     public static double calculateSpeed(double timeInMinutes, double distanceInKilometers) {
-        if (timeInMinutes == 0) {
-            throw new IllegalArgumentException("time should be not zero");
+        if (timeInMinutes <= 0) {
+            throw new IllegalArgumentException("time should be greater than zero");
         }
         return convertKilometersToMetres(distanceInKilometers) / convertMinutesToSeconds(timeInMinutes);
     }
